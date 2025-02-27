@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header .logo h1 {
+    font-size: 2.5em;
+}
+
+header .logo img {
+    width: 50px; /* Ajuste o tamanho do logo */
+    height: auto;
+    margin-left: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none; /* Remover sublinhado */
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff9800; /* Cor laranja para o hover */
+}
+
+main {
+    padding: 40px 20px;
+}
+
+
+/* Estilização da Página de Notícia */
+.news-detail {
+    max-width: 900px; /* Aumentei a largura para dar mais espaço ao conteúdo */
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff; /* Fundo mais neutro para facilitar a leitura */
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para dar destaque */
+}
+
+.news-detail h2 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333; /* Cor mais neutra para o título */
+}
+
+.news-detail .news-date {
+    font-size: 1.1em;
+    color: #777; /* Cor mais suave para a data */
+    margin-bottom: 20px;
+}
+
+.news-detail .news-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.news-detail .news-content {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555; /* Cor neutra para o texto */
+    margin-bottom: 20px;
+}
+
+/* Removendo o efeito de fundo RGB na página individual */
+main {
+    background: #f4f4f4; /* Um tom mais suave e neutro */
+}
+
+/* Ajustes gerais na página */
+body {
+    background-color: #f4f4f4; /* Para manter um fundo mais limpo */
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+.logo {
+    font-size: 15px;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .articles {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .logo h1 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+
+
+

@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 12px;
+    background-color: #800020; 
+    color: white;
+  }
+  
+  .homeButton button,
+  .userProfile button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.6em;
+    color: white;
+  }
+  
+  .titleHeader {
+    flex: 1;
+    text-align: center;
+    font-size: 10px;
+  }
+  
+  .homeButton,
+  .userProfile {
+    flex: 0 0 auto;
+    color: white;
+  }
+  
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #800020;
+    color: white;
+    padding: 6px 12px;
+}
+
+.banner img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.banner h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.pratos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 100px;
+  }
+  
+  .pratos div {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .pratos div img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .pratos div p {
+    padding: 15px;
+    font-size: 0.9em;
+    color: #333;
+    flex-grow: 1;
+    margin: 0;
+  }
+  

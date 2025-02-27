@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Angola</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>Angola News <img src="./img/5png.png" alt="logo" /></h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#">Mundo</a></li>
+          <li><a href="#">Economia</a></li>
+          <li><a href="#">Indústria</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Carrossel de Banners -->
+      <section class="news-banner-carousel">
+        <a
+          href="noticia1.html"
+          class="news-banner"
+          style="background-image: url('../site-noticias-app/img/1.jpeg')"
+        >
+          <div class="overlay">
+            <h2>Avião faz pouso forçado</h2>
+            <p>Avião moscou em Moscow e teve que fazer pouso forçado.</p>
+          </div>
+        </a>
+        <a
+          href="noticia2.html"
+          class="news-banner"
+          style="background-image: url('./img/2.jpg')"
+        >
+          <div class="overlay">
+            <h2>Boi gordo engorda</h2>
+            <p>O boi gordo está mais gordo logo seu preço subiu.</p>
+          </div>
+        </a>
+        <a
+          href="noticia4.html"
+          class="news-banner"
+          style="background-image: url('./img/3.png')"
+        >
+          <div class="overlay">
+            <h2>Bolsa de valores cai</h2>
+            <p>
+              Bolsa despenca e vai parar no inferno, investidores reclamam do
+              calor...
+            </p>
+          </div>
+        </a>
+        <!-- Setas de Navegação -->
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+      </section>
+
+      <!-- Artigos -->
+      <section class="articles">
+        <article class="news-item" style="background-image: url('./img/2.jpg')">
+          <a href="noticia1.html">
+            <div class="overlay">
+              <h3>Boi gordo engorda</h3>
+              <p>O boi gordo está mais gordo logo seu preço subiu</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="news-item" style="background-image: url('./img/3.png')">
+          <a href="noticia2.html">
+            <div class="overlay">
+              <h3>Bolsa de valores cai</h3>
+              <p>
+                Bolsa despenca e vai parar no inferno, investidores reclamam do
+                calor...
+              </p>
+            </div>
+          </a>
+        </article>
+
+        <article class="news-item" style="background-image: url('./img/4.jpg')">
+          <a href="noticia3.html">
+            <div class="overlay">
+              <h3>Motores estão mais caros</h3>
+              <p>
+                O custo do metal subiu, logo os fabricantes de motores levaram
+                ferro
+              </p>
+            </div>
+          </a>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 News Angola - Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script para o Carrossel -->
+    <script>
+      let slideIndex = 0;
+
+      function showSlides() {
+        const slides = document.querySelectorAll(".news-banner");
+        slides.forEach((slide, index) => {
+          slide.style.opacity = index === slideIndex ? "1" : "0";
+          slide.style.transition = "opacity 1s ease-in-out";
+        });
+      }
+
+      function moveSlide(n) {
+        const slides = document.querySelectorAll(".news-banner");
+        slideIndex = (slideIndex + n + slides.length) % slides.length; // Garante que o slideIndex seja sempre válido
+        showSlides();
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        showSlides(); // Exibe o primeiro slide ao carregar a página
+      });
+    </script>
+  </body>
+</html>
